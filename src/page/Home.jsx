@@ -1,6 +1,13 @@
+import Header from "../composant/Header";
+import Footer from "../composant/Footer";
+
+
 const Home = () => {
     return (
-        <h>Welcome to this website!</h>
+        <>
+            <Header />
+            <Footer />
+        </>
     )
 }
 

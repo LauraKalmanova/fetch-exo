@@ -1,15 +1,15 @@
 
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 const Recettes = () => {
 
     const [meals, setMeals] = useState(null);
 
-    if (meals === null) {
+    useEffect(() => {
         (async () => {
             const mealsResponse = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=");
             setMeals(await mealsResponse.json());
         })();
-    }
+    }, []);
 
     return (
       <div>
@@ -18,7 +18,8 @@ const Recettes = () => {
                 {meals.meals.map((meal) => {
                     return (
                         <article>
-                            <p>{meal.strMeal}</p>
+                            <h3>{meal.strMeal}</h3>
+                            <p>{meal.strInstructions}</p>
                         </article>
                     );
                 })}
