@@ -4,7 +4,7 @@ const Header = () => {
     return (
       <header>
         
-        <h1>Jimmy's Meals Famous</h1>
+        <h1>Jimmy's Famous Meals</h1>
 
         <img src="https://th.bing.com/th/id/R.7b1dfc0205d70c78be4eee65e7e709c5?rik=K9mRw6qRvVQjUQ&pid=ImgRaw&r=0" alt="Meals logo" />
   
