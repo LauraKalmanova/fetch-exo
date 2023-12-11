@@ -6,7 +6,7 @@ const Recettes = () => {
 
     if (meals === null) {
         (async () => {
-            const mealsResponse = await fetch('www.themealdb.com/api/json/v1/1/search.php?s=');
+            const mealsResponse = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=");
             setMeals(await mealsResponse.json());
         })();
     }
@@ -24,7 +24,7 @@ const Recettes = () => {
                 })}
             </>
         ) : (
-            <p>Recettes en cours de récuperation</p>
+            <p>Recettes en cours de récupération</p>
         )}
       </div>  
     );
