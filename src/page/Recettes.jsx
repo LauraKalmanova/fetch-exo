@@ -25,7 +25,7 @@ const Recettes = () => {
                         return (
                             <article>
                                 <h3>{meal.strMeal}</h3>
-                                <Link to={"/meal/details/${meal.idMeal}"}>See the recipe</Link>
+                                <Link to={`/meal/details/${meal.idMeal}`}>See the recipe</Link>
                             </article>
                         );
                     })}
