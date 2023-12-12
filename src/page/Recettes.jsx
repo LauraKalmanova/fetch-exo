@@ -1,5 +1,9 @@
 
 import {useEffect, useState} from 'react';
+import Header from '../composant/Header';
+import Footer from '../composant/Footer';
+
+
 const Recettes = () => {
 
     const [meals, setMeals] = useState(null);
@@ -13,20 +17,22 @@ const Recettes = () => {
 
     return (
       <div>
-        {meals ? (
-            <>
-                {meals.meals.map((meal) => {
-                    return (
-                        <article>
-                            <h3>{meal.strMeal}</h3>
-                            <p>{meal.strInstructions}</p>
-                        </article>
-                    );
-                })}
-            </>
-        ) : (
-            <p>Recettes en cours de récupération</p>
-        )}
+        <Header />
+            {meals ? (
+                <>
+                    {meals.meals.map((meal) => {
+                        return (
+                            <article>
+                                <h3>{meal.strMeal}</h3>
+                                <p>{meal.strInstructions}</p>
+                            </article>
+                        );
+                    })}
+                </>
+            ) : (
+                <p>Recettes en cours de récupération</p>
+            )}
+        <Footer />
       </div>  
     );
 };

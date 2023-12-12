@@ -4,6 +4,7 @@ import Recettes from './page/Recettes';
 import Categories from './page/Categories';
 import Cuisine from './page/Cuisine';
 import Ingredients from './page/Ingredients';
+import MealDetails from './page/MealDetails';
 import './App.css';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/categories" element={<Categories />} />
         <Route path="/cuisine" element={<Cuisine />} />
         <Route path="/ingredients" element={<Ingredients />} />
+        <Route path="/meal/details/:id" element={<MealDetails />} />
       </Routes>
     </BrowserRouter>
   );

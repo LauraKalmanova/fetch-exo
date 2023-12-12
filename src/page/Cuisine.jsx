@@ -1,4 +1,6 @@
 import {useEffect, useState} from 'react';
+import Header from '../composant/Header';
+import Footer from '../composant/Footer';
 
 const Cuisine = () => {
     const [cuisines, setCuisines] = useState(null);
@@ -12,19 +14,21 @@ const Cuisine = () => {
     
     return (
       <div>
-        {cuisines ? (
-            <>
-                {cuisines.meals.map((cuisine) => {
-                    return (
-                        <article>
-                            <h3>{cuisine.strArea}</h3>
-                        </article>
-                    );
-                })}
-            </>
-        ) : (
-            <p>Cuisines are charging</p>
-        )}
+        <Header />
+            {cuisines ? (
+                <>
+                    {cuisines.meals.map((cuisine) => {
+                        return (
+                            <article>
+                                <h3>{cuisine.strArea}</h3>
+                            </article>
+                        );
+                    })}
+                </>
+            ) : (
+                <p>Cuisines are charging</p>
+            )}
+        <Footer />
       </div>  
     );
 }

@@ -12,3 +12,7 @@ h1 {
 .footer {
     font-size: 10px;
 }
+
+.nav-link {
+    color: black;
+}

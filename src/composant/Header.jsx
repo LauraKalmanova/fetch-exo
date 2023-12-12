@@ -11,19 +11,19 @@ const Header = () => {
         <nav>
             <ul className="nav justify-content-end">
                 <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="#"><Link to="/">Home</Link></a>
+                    <Link to="/" className="nav-link" aria-current="page">Home</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#"><Link to="/categories">Categories</Link></a>
+                    <Link to="/categories" className="nav-link">Categories</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#"><Link to="/cuisine">Cuisine</Link></a>
+                    <Link to="/cuisine" className="nav-link">Cuisine</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link"><Link to="/recettes">Recipes</Link></a>
+                    <Link to="/recettes" className="nav-link">Recipes</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link"><Link to="/ingredients">Ingredients</Link></a>
+                    <Link to="/ingredients" className="nav-link">Ingredients</Link>
                 </li>
             </ul>
         </nav>

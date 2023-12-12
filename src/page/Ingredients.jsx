@@ -1,4 +1,6 @@
 import {useEffect, useState} from 'react';
+import Header from '../composant/Header';
+import Footer from '../composant/Footer';
 
 const Ingredients = () => {
     const [ingredients, setIngredients] = useState(null);
@@ -12,20 +14,22 @@ const Ingredients = () => {
 
     return (
       <div>
-        {ingredients ? (
-            <>
-                {ingredients.meals.map((ingredient) => {
-                    return (
-                        <article>
-                            <h3>{ingredient.strIngredient}</h3>
-                            <p>{ingredient.strDescription}</p>
-                        </article>
-                    );
-                })}
-            </>
-        ) : (
-            <p>Ingredients are charging</p>
-        )}
+        <Header />
+            {ingredients ? (
+                <>
+                    {ingredients.meals.map((ingredient) => {
+                        return (
+                            <article>
+                                <h3>{ingredient.strIngredient}</h3>
+                                <p>{ingredient.strDescription}</p>
+                            </article>
+                        );
+                    })}
+                </>
+            ) : (
+                <p>Ingredients are charging</p>
+            )}
+        <Footer />
       </div>  
     );
 }
