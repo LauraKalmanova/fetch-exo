@@ -12,7 +12,7 @@ const LastThreeMeals = ({meals}) => {
                 <>
                     {lastThreeMeals.map((meal) => {
                         return (
-                            <article>
+                            <article className="lastThreeBox">
                                 <h4>{meal.strMeal}</h4>
                                 <img src={meal.strMealThumb} alt={meal.strMeal} />
                             </article>

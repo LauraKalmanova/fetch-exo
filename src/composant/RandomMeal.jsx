@@ -7,10 +7,8 @@ const RandomMeal = ({meals}) => {
     return (
         <div>
             <h2>Try this one!</h2>
-            <article>
                 <h4>{randomMeal.strMeal}</h4>
                 <img src={randomMeal.strMealThumb} alt={randomMeal.strMeal} />
-            </article>   
         </div>
     );
 
