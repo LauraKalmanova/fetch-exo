@@ -2,7 +2,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
+    width: 200px;
 }
 
 h1 {
@@ -15,4 +15,8 @@ h1 {
 
 .nav-link {
     color: black;
+}
+
+nav {
+    justify-content: space-around;
 }

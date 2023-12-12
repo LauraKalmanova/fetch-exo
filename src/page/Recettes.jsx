@@ -1,7 +1,8 @@
-
 import {useEffect, useState} from 'react';
 import Header from '../composant/Header';
 import Footer from '../composant/Footer';
+import {Link} from 'react-router-dom';
+
 
 
 const Recettes = () => {
@@ -24,7 +25,7 @@ const Recettes = () => {
                         return (
                             <article>
                                 <h3>{meal.strMeal}</h3>
-                                <p>{meal.strInstructions}</p>
+                                <Link to={"/meal/details/${meal.idMeal}"}>See the recipe</Link>
                             </article>
                         );
                     })}

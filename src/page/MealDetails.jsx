@@ -25,6 +25,8 @@ const MealDetails = () => {
                 {meal ? (
                     <article>
                         <h2>{meal.strMeal}</h2>
+                        <img src={meal.strMealThumb} alt={meal.strMeal} />
+                        <p>{meal.strInstructions}</p>
                     </article>
                 ) : (
                     <p>The recipe is loading</p>
